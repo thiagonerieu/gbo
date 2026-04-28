@@ -2,23 +2,28 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>GameBook Organiser</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header id="header">
-        <h1>GameBook Organiser</h1>       
+    <h1>GameBook</h1>
+    <p>Organiser</p>    
     </header>
-    <main id="main">
-        <section>
-            <div>
-
-            </div>
-            <div>
-                <title>Nom d'utilisateur</title>
-                <p>utilisateur@email.com</p>
-            </div>
-        </section>
+    <body>
+    <main class="login-container">
+    <form>
+        <label>E-mail</label>
+        <input type="email" placeholder="Saisissez votre adresse e-mail ici...">
+        <label>Mot de passe</label><label>Mot de passe oublié ?</label>
+        <div class="password-wrapper">
+        <input type="password" placeholder="Saisissez votre mot de passe ici...">
+        <span class="icon-eye"></span>
+        </div>
+        <button class="btn-login">Se connecter</button>
+        <p>or</p>
+        <button class="btn-login-google">Connecter avec Google</button>
+    </form>
+    <p class="linkCreationCompte">Créer un compte</p>
     </main>
     <footer>        
     </footer>
