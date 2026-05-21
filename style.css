@@ -10,26 +10,41 @@ header {
   gap: 2em;
 }
 
-.login-container {
+/* .login-container {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espaço entre todos os elementos */
-    width: 90%; /* Responsivo: 90% da largura da tela no mobile */
-    max-width: 400px; /* Não deixa esticar demais em tablets */
     margin: 0 auto;
+} */
+
+form {
+  display: flexbox;
+  flexbox-direction: column;
+  max-width: 400 px;
 }
 
 input {
-    width: 100%;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.label-password {
+  display: flexbox;
+  flexbox-direction: row;
+  justify-content: space-between;
 }
 
 .btn-login {
-    background-color: #ff7b72;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
+  background-color: #ff7b72;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.line-or-line {
+  display: flexbox;
+  flex-direction: column;
+  justify-content: space-between;
 }
