@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'titleFont';
+    src: url('./fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'bodyFont';
+    src: url('./fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+/* === RESET / BASE === */
+*, *::before, *::after {
+    box-sizing: border-box; 
+    /* Com border-box, o padding fica dentro da borda. O que você define é o tamanho final, sem surpresas. */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1E293B;
+    border: 10px solid #334155;
+    color: #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'bodyFont', sans-serif;
+    font-size: 1rem;
+}
+
+.page-header {
+    display: grid;
+    justify-content: center;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+.page-header-logo {
+    max-width: 200px;
+}
+
+.page-main {
+    margin: 2vh;
+}
+
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    padding: 16px 24px;
+    margin: auto;
+}
+
+.page-footer-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-link {
+    font-size: 0.9rem;
+    color: #E2E8F0;
+    text-decoration: underline;
+}
+
+.footer-link:hover {
+    color: #ff7b72;
+}
+
+/* === FORM — componentes reutilizáveis === */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-label {
+    font-family: 'bodyFont', sans-serif;
+    font-size: 0.9rem;
+    color: #E2E8F0;
+}
+
+.form-label-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-link {
+    font-size: 0.9rem;
+    color: #E2E8F0;
+    text-decoration: underline;
+}
+
+.form-link:hover {
+    color: #ff7b72;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    background-color: #334155;
+    color: #E2E8F0;
+    font-family: 'bodyFont', sans-serif;
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #818CF8;
+}
+
+.form-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-input-wrapper .form-input {
+    padding-right: 44px; /* espaço para o ícone. preciso entender melhor essa parte de colocar o icone de olho dentro do campo do formulârio. */
+}
+
+.form-icon-eye {
+    position: absolute;
+    right: 14px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('./icons/icon-eye.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+}
+/* o ícone ainda não aparece, é preciso checar para mostrar ou esconder a senha. */
+
+.form-icon-eye:hover {
+    opacity: 1;
+}
+
+.btn {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: 'bodyFont', sans-serif;
+    font-size: 1rem;
+    transition: opacity 2s ease;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    background-color: #818CF8;
+}
+
+.btn-primary {
+    background-color: #ff7b72;
+    color: #E2E8F0;
+    width: 60%;
+}
+
+/* portables 767px maximun */
+@media screen and (max-width: 767px) {
+  body, input, button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .page-header-logo {
+    /* Se tiver versão @2x da logo: */
+    /* content: url('./imgs/logo-gbo@2x.svg'); */
+  }
+}

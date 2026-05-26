@@ -2,29 +2,49 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="gbo-style.css">
+    <link rel="stylesheet" href="gbo-base.css">
+    <link rel="stylesheet" href="gbo-login.css">
 </head>
-<body>
-    <header id="header">
-        <img src="#" alt="logo GameBook Organiser">
+<body class="page-login">
+
+    <header class="page-header">
+        <img src="./imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
     </header>
-    <main>
-        <a class="login-container">
-        <form id="loginpage" method="get" action="">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Saisissez votre adresse e-mail ici...">
-            <div class="label-password"><label for="password">Mot de passe</label><label><a href="./gbo-account-recovery">Mot de passe oublié ?</a></label></div>
-            <div class="password-wrapper">
-                <input type="password" name="password" placeholder="Saisissez votre mot de passe ici...">
-                <span class="icon-eye"></span>
+    <main class="page-main">
+        <form class="form" id="form-login" method="post" action="">
+
+            <div class="form-group">
+                <label class="form-label" for="email">E-mail</label>
+                <input class="form-input" type="email" name="email" id="email" placeholder="Votre adresse e-mail ici..." required>
             </div>
-            <button class="btn-login">Se connecter</button>
+
+            <div class="form-group">
+                <div class="form-label-row">
+                    <label class="form-label" for="password">Mot de passe</label>
+                    <a class="form-link" href="./gbo-account-recovery">Mot de passe oublié ?</a>
+                </div>
+                <div class="form-input-wrapper">
+                    <input class="form-input" type="password" name="password" id="password" placeholder="Votre mot de passe ici..." required>
+                    <!-- Necessita ainda limitar a quantidade de caracteres. -->
+                    <span class="form-icon form-icon-eye"></span>
+                    <!-- Necessita ainda fazer o icone de olho aparecer. -->
+                </div>
+            </div>
+
+            <button class="btn btn-primary">Se connecter</button>
+
         </form>
-        <a href="#"><img src="#" alt="icône des langues"></a>
-        <p class="link-signup"><a href="./gbo-signup">Créer un compte</a></p>
     </main>
-    <footer>        
+    
+    <footer class="page-footer">
+        <a href="#" class="page-footer-icon-lang">
+            <img src="./icons/icon_langue.svg" class="page-footer-icon" alt="icône des langues">
+        </a>
+        <p class="page-footer-signup">
+            <a class="footer-link" href="./gbo-signup">Créer un compte</a>
+        </p>
     </footer>
+    
     <script src="gbo-script.js"></script>
 </body>
 </html>

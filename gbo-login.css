@@ -1,0 +1,18 @@
+body.page-login .page-header {
+  margin-top: 15vh;
+  margin-bottom: 8vh;
+}
+
+body.page-login .page-main {
+  display: flex;
+  justify-content: center;
+}
+
+body.page-login .form {
+  width: 100%;
+  max-width: 420px;
+}
+
+body.page-login .btn-primary {
+  align-self: center;
+}
