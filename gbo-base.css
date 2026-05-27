@@ -42,31 +42,6 @@ body {
     margin: 2vh;
 }
 
-.page-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    align-items: center;
-    padding: 16px 24px;
-    margin: auto;
-}
-
-.page-footer-icon {
-    width: 24px;
-    height: 24px;
-}
-
-.footer-link {
-    font-size: 0.9rem;
-    color: #E2E8F0;
-    text-decoration: underline;
-}
-
-.footer-link:hover {
-    color: #ff7b72;
-}
-
-/* === FORM — componentes reutilizáveis === */
 .form {
     display: flex;
     flex-direction: column;
@@ -125,22 +100,53 @@ body {
     align-items: center;
 }
 
-.form-input-wrapper .form-input {
-    padding-right: 44px; /* espaço para o ícone. preciso entender melhor essa parte de colocar o icone de olho dentro do campo do formulârio. */
-}
+/* espaço para o ícone olho (???). */
+/* .form-input-wrapper .form-input {
+    padding-right: 44px; 
+} */
 
-.form-icon-eye {
+// CONFERIR ICONES DE EMAIL E CADEADO: saber quais atributos deve, permanecer nos selectores abaixo.
+// E PRESTAR ATENCAO NO CSS QUANDO FOR DUPLICAR O ARQUIVO PARA FAZER FORM DE CREATION DE COMPTE E RECUPERATION DE MOT DE PASSE.
+
+.form-icon-email {
     position: absolute;
-    right: 14px;
+    left: 16px;
     width: 20px;
     height: 20px;
-    cursor: pointer;
-    background-image: url('./icons/icon-eye.svg');
+    /* cursor: pointer; */
+    background-image: url('./icons/icon-email.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
 }
-/* o ícone ainda não aparece, é preciso checar para mostrar ou esconder a senha. */
+
+.form-icon-padlock {
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    /* cursor: pointer; */
+    background-image: url('./icons/icon-padlock-closed.png'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+}
+
+#login-email .placeholder {
+    left: 32px;
+}
+
+.form-icon-eye {
+    position: absolute;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('./icons/icon-eye-hidden.svg'); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+}
 
 .form-icon-eye:hover {
     opacity: 1;
@@ -164,25 +170,57 @@ body {
 .btn-primary {
     background-color: #ff7b72;
     color: #E2E8F0;
-    width: 60%;
+    width: 100%;
+}
+
+.page-footer-icon-lang {
+    opacity: 0.6;
+}
+
+.page-footer-icon-lang:hover {
+    opacity: 1;
+}
+
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    padding: 16px 24px;
+    margin: auto;
+}
+
+.page-footer-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-link {
+    font-size: 0.9rem;
+    color: #E2E8F0;
+    text-decoration: underline;
+}
+
+.footer-link:hover {
+    color: #ff7b72;
 }
 
 /* portables 767px maximun */
 @media screen and (max-width: 767px) {
-  body, input, button {
+    body, input, button {
     font-size: 1rem;
-  }
+    }
 }
 
 @media screen and (orientation: landscape) {
-  .sidebar {
+    .sidebar {
     display: none;
-  }
+    }
 }
 
 @media screen and (min-resolution: 2dppx) {
-  .page-header-logo {
+    .page-header-logo {
     /* Se tiver versão @2x da logo: */
     /* content: url('./imgs/logo-gbo@2x.svg'); */
-  }
+    }
 }
