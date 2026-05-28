@@ -18,12 +18,12 @@ body.page-login .btn-primary {
 }
 
 /* portables 767px maximun */
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   #login-box {
     width: 100%;
     border: none;
     padding: 16px;
   }
-}
+} */
 
 
