@@ -18,7 +18,7 @@
 
 body {
     background-color: #1E293B;
-    border: 10px solid #334155;
+    border: 8px solid #334155;
     color: #E2E8F0;
     display: flex;
     flex-direction: column;
@@ -30,16 +30,16 @@ body {
 .page-header {
     display: grid;
     justify-content: center;
-    margin-top: 20vh;
-    margin-bottom: 10vh;
+    /* margin-top: 20vh; */
+    /* margin-bottom: 10vh; */
 }
 
-.page-header-logo {
+/* .page-header-logo {
     max-width: 200px;
-}
+} */
 
 .page-main {
-    margin: 2vh;
+    margin: 0;
 }
 
 .form {
@@ -100,20 +100,21 @@ body {
     align-items: center;
 }
 
-/* espaço para o ícone olho (???). */
-/* .form-input-wrapper .form-input {
-    padding-right: 44px; 
-} */
+/* Input com ícone à esquerda (email e senha) */
+.form-input-wrapper .form-input {
+    padding-left: 44px;
+}
 
-// CONFERIR ICONES DE EMAIL E CADEADO: saber quais atributos deve, permanecer nos selectores abaixo.
-// E PRESTAR ATENCAO NO CSS QUANDO FOR DUPLICAR O ARQUIVO PARA FAZER FORM DE CREATION DE COMPTE E RECUPERATION DE MOT DE PASSE....
+/* Input com ícone à esquerda e à direita (senha: cadeado + olho) */
+#login-password {
+    padding-right: 44px;
+}
 
 .form-icon-email {
     position: absolute;
     left: 16px;
     width: 20px;
     height: 20px;
-    /* cursor: pointer; */
     background-image: url('./icons/icon-email.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
@@ -125,15 +126,10 @@ body {
     left: 16px;
     width: 20px;
     height: 20px;
-    /* cursor: pointer; */
     background-image: url('./icons/icon-padlock-closed.png'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
-}
-
-#login-email .placeholder {
-    left: 32px;
 }
 
 .form-icon-eye {
@@ -206,15 +202,16 @@ body {
 }
 
 /* portables 767px maximun */
+/* Preciso ajustar a responsividade prq celular de modo que o formulario não fique tão pequeno.*/
 @media screen and (max-width: 767px) {
     body, input, button {
-    font-size: 1rem;
+        font-size: 1rem;
     }
 }
-
+ 
 @media screen and (orientation: landscape) {
     .sidebar {
-    display: none;
+        display: none;
     }
 }
 
@@ -223,4 +220,4 @@ body {
     /* Se tiver versão @2x da logo: */
     /* content: url('./imgs/logo-gbo@2x.svg'); */
     }
-}
+} */

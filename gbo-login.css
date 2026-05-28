@@ -1,6 +1,6 @@
 body.page-login .page-header {
-  margin-top: 15vh;
-  margin-bottom: 8vh;
+  margin-top: 12vh;
+  margin-bottom: 12vh;
 }
 
 body.page-login .page-main {
@@ -16,4 +16,14 @@ body.page-login .form {
 body.page-login .btn-primary {
   align-self: center;
 }
+
+/* portables 767px maximun */
+@media screen and (max-width: 767px) {
+  #login-box {
+    width: 100%;
+    border: none;
+    padding: 16px;
+  }
+}
+
 
