@@ -1,42 +1,48 @@
-# gbo
-// Page de connexion
-_main
-    _div caixa flexbox
-        _img logo
-        _form 
-            _label email
-            _input email + placeholder
-            _label mot-de-passe + label mot-de-passe-oublié?
-            _input mot_de_passe + placeholder + typepassword (icon oeil)
-            _button connexion
-            _p or
-            _button connexion-google
-        _/form
-        _a href_img icon-langue
-        _a href(Créer un compte)
-    /div
-_/main
-
-// Page de récuperation de mot de passe
-_main
-    _div caixa flexbox
-        _img logo
-        _form 
-            _label email
-            _input email + placeholder
-            _button envoyer
-        _/form
-        _div msg erreur
-        _a href_img icon-langue
-        _a href(Créer un compte)
-        _a href(Retour a la page de connexion)
-    /div
-_/main
-
-// Page de création de compte
-_main
-    _div caixa flexbox
-        _img logo
-        _form
-            
+/gamebook-organiser
+│
+├── /public                    ← site vitrine, blog, vendas
+│   ├── index.html
+│   ├── blog.html
+│   ├── pricing.html
+│   └── /assets
+│       ├── /css
+│       │   ├── public-base.css
+│       │   ├── public-home.css
+│       │   └── public-blog.css
+│       ├── /js
+│       └── /imgs
+│
+├── /app                       ← aplicação interna (após login)
+│   ├── dashboard.html
+│   ├── project.html
+│   └── /assets
+│       ├── /css
+│       │   ├── app-base.css
+│       │   ├── app-dashboard.css
+│       │   └── app-project.css
+│       ├── /js
+│       │   ├── app-auth.js
+│       │   ├── app-charts.js
+│       │   └── app-project.js
+│       └── /imgs
+│
+├── /auth                      ← login, signup, recuperação
+│   ├── login.html
+│   ├── signup.html
+│   └── account-recovery.html
+│
+├── /shared                    ← tudo que é compartilhado entre as partes
+│   ├── /css
+│   │   └── base.css           ← reset, tipografia, variáveis CSS
+│   ├── /js
+│   │   └── utils.js
+│   ├── /fonts
+│   └── /icons
+│
+└── /imgs                      ← imagens globais (logo, og:image, etc.)
    
+/shared/js/utils.js          ← funções reutilizáveis (validação, formatação)
+/auth/auth.js                ← login, signup, recovery
+/app/js/charts.js            ← gráficos
+/app/js/projects.js          ← CRUD de projetos
+/app/js/ui.js                ← sidebar, menus, dark mode

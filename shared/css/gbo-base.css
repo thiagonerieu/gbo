@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'titleFont';
-    src: url('./fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+    src: url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'bodyFont';
-    src: url('./fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+    src: url('../fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
 }
 
 /* === RESET / BASE === */
@@ -16,30 +16,77 @@
     padding: 0;
 }
 
+/* shared/css/gbo-base.css | variáveis de base para mudança de estilos.*/
+:root {
+    --color-bg:         #1E293B;
+    --color-surface:    #334155;
+    --color-border:     #334155;
+    --color-text:       #E2E8F0;
+    --color-primary:    #ff7b72;
+    --color-accent:     #818CF8;
+
+    --radius-sm:        6px;
+    --radius-md:        10px;
+    --radius-lg:        16px;
+
+    --font-title:       'titleFont', serif;
+    --font-body:        'bodyFont', sans-serif;
+}
+
 body {
-    background-color: #1E293B;
-    border: 8px solid #334155;
-    color: #E2E8F0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
+    align-items: center;        /* centraliza horizontalmente */
+    justify-content: center;    /* centraliza verticalmente */
     min-height: 100vh;
     font-family: 'bodyFont', sans-serif;
     font-size: 1rem;
 }
 
-.page-header {
-    display: grid;
-    justify-content: center;
-    /* margin-top: 20vh; */
-    /* margin-bottom: 10vh; */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;                        /* top/right/bottom/left: 0 */
+    border: 8px solid #334155;
+    pointer-events: none;            /* não bloqueia cliques */
+    z-index: 9999;                   /* fica na frente de tudo */
 }
 
-/* .page-header-logo {
-    max-width: 200px;
-} */
+.page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 24px;
+}
+
+.page-header-logo {
+    width: 180px;      /* menor que o original — elegante no desktop */
+    height: auto;      /* mantém proporção */
+}
 
 .page-main {
     margin: 0;
+}
+
+body.page-login .page-main {
+    display: flex;
+    justify-content: center;
+}
+
+body.page-login .form {
+    width: 100%;
+    max-width: 420px;
+}
+
+.page-header,
+.page-main,
+.page-footer {
+    width: 100%;
+    max-width: 480px;       /* alinha tudo na mesma coluna */
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .form {
@@ -100,6 +147,17 @@ body {
     align-items: center;
 }
 
+/* Remove o ícone nativo de senha do Chrome/Edge */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    display: none;
+}
+
 /* Input com ícone à esquerda (email e senha) */
 .form-input-wrapper .form-input {
     padding-left: 44px;
@@ -115,7 +173,7 @@ body {
     left: 16px;
     width: 20px;
     height: 20px;
-    background-image: url('./icons/icon-email.svg'); 
+    background-image: url('../icons/icon-email.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -126,7 +184,7 @@ body {
     left: 16px;
     width: 20px;
     height: 20px;
-    background-image: url('./icons/icon-padlock-closed.png'); 
+    background-image: url('../icons/icon-padlock-closed.png'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -138,7 +196,7 @@ body {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background-image: url('./icons/icon-eye-hidden.svg'); 
+    background-image: url('../icons/icon-eye-hidden.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -183,7 +241,8 @@ body {
     gap: 2em;
     align-items: center;
     padding: 16px 24px;
-    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 2vh;
 }
 
 .page-footer-icon {
@@ -201,23 +260,35 @@ body {
     color: #ff7b72;
 }
 
-/* portables 767px maximun */
-/* Preciso ajustar a responsividade prq celular de modo que o formulario não fique tão pequeno.*/
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    /* .page-header-logo {
+        width: 160px;
+    } */
+}
+
+/* Mobile */
 @media screen and (max-width: 767px) {
+    /* .page-header {
+        padding: 28px 16px;
+    } */
+    /* .page-header-logo {
+        width: 140px;
+    } */
+}
+
+
+/* portables 767px maximun */
+/* Preciso ajustar a responsividade para celular de modo que o formulario não fique tão pequeno.*/
+/* @media screen and (max-width: 767px) {
     body, input, button {
         font-size: 1rem;
     }
-}
- 
+} */
+
+/* Esconde o elemento com classe sidebar — comum para liberar espaço horizontal em telas pequenas giradas.
 @media screen and (orientation: landscape) {
     .sidebar {
         display: none;
-    }
-}
-
-@media screen and (min-resolution: 2dppx) {
-    .page-header-logo {
-    /* Se tiver versão @2x da logo: */
-    /* content: url('./imgs/logo-gbo@2x.svg'); */
     }
 } */

@@ -1,0 +1,20 @@
+body.page-login .page-main {
+  display: flex;
+  justify-content: center;
+}
+
+body.page-login .form {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* portables 767px maximun */
+@media screen and (max-width: 767px) {
+    .page-header,
+    .page-main,
+    .page-footer {
+        max-width: 100%;        /* ocupa a tela toda no mobile */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
