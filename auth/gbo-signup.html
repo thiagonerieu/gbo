@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBook Organiser - Inscription</title>
+    <link rel="stylesheet" href="../shared/css/gbo-base.css">
+    <link rel="stylesheet" href="gbo-signup.css">
+</head>
+<body class="page-signup">
+
+    <header class="page-header">
+        <img src="../imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
+        <p>En créant un compte, vous pouvez créer et organiser vos projets d'histoires interactives.</p>
+    </header>
+    <main class="page-main">
+
+        <form id="form-signup" class="form" method="post" action="">
+
+            <div class="form-group">
+                <div class="form-label-row">
+                    <label class="form-label" for="first-name">Prénom</label>
+                </div>
+                <div class="form-input-wrapper">
+                    <input id="signup-first-name" class="form-input" type="text" name="first-name" placeholder="Votre prénom ici..." required>
+                    <!-- Limitar caracteres de primeiro e segundo nome em JS. -->
+                    <span class="form-icon form-icon-first-name"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label-row">
+                    <label class="form-label" for="last-name">Nom</label>
+                </div>
+                <div class="form-input-wrapper">
+                    <input id="signup-last-name" class="form-input" type="text" name="last-name" placeholder="Votre nom ici..." required>
+                    <span class="form-icon form-icon-last-name"></span>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="form-label-row">
+                    <label class="form-label" for="email">E-mail</label>
+                </div>
+                <div class="form-input-wrapper">
+                    <input id="signup-email" class="form-input" type="email" name="email" placeholder="Votre adresse e-mail ici..." required>
+                    <span id="form-icon-email" class="form-icon form-icon-email"></span>
+                    <!-- Página de criação de conta : Fazer aparecer o ícone de bloqueado para criar conta quando o email já estiver registrado. E o ícone de email para quando o email for válido e não tiver registro. -->
+                </div>    
+            </div>
+
+            <div class="form-group">
+                <div class="form-label-row">
+                    <label class="form-label" for="password">Mot de passe</label>
+                </div>
+                <div class="form-input-wrapper">
+                    <input id="signup-password" class="form-input" type="password" name="password"  placeholder="Votre mot de passe ici..." required>
+                    <span class="form-icon form-icon-padlock"></span>
+                    <span class="form-icon form-icon-eye"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label-row">
+                    <label class="form-label" for="password">Confirmer le mot de passe</label>
+                </div>
+                <div class="form-input-wrapper">
+                    <input id="signup-password-confirm" class="form-input" type="password" name="password-confirm"  placeholder="Confirmez votre mot de passe ici..." required>
+                    <span class="form-icon form-icon-padlock"></span>
+                    <span class="form-icon form-icon-eye"></span>
+                    <!-- Inserir comando JS que avisa quando as senham não coincidem. E também para mostrar o ícone de bloqueado quando as senhas não coincidirem, e o ícone de desbloqueado quando as senhas coincidirem. -->
+                </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Créer un compte</button>
+
+        </form>
+    </main>
+    
+    <footer class="page-footer">
+        <!-- Falta criar a funcionalidade da troca de lingua.  -->
+        <!-- Pensar em adicionar aqui também o dark/ligth mode. -->
+        <a href="#" class="page-footer-icon-lang">
+            <img src="../shared/icons/icon-langue.svg" class="page-footer-icon" alt="icône des langues">
+        </a>
+        <p class="page-footer-signup">Vous avez déjà un compte ? 
+            <a class="footer-link" href="gbo-login.html">Se connecter</a>
+        </p>
+    </footer>
+
+    <script src="gbo-signup.js"></script>
+</body>
+</html>

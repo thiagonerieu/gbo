@@ -1,11 +1,19 @@
-body.page-login .page-main {
+body.page-signup .page-main {
     display: flex;
     justify-content: center;
 }
 
-body.page-login .form {
+body.page-signup .form {
     width: 100%;
     max-width: 420px;
+}
+
+.page-header {
+    gap: 32px;
+}
+
+.page-header p {
+    color: var(--color-accent);
 }
 
 /* portables 768px maximun */

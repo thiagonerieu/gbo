@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBook Organiser - Récupération de compte</title>
+    <link rel="stylesheet" href="../shared/css/gbo-base.css">
+    <link rel="stylesheet" href="gbo-account-recovery.css">
+</head>
+<body class="page-account-recovery">
+
+    <header class="page-header">
+        <img src="../imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
+    </header>
+    <main class="page-main">
+        <form id="form-account-recovery" class="form" method="post" action="">
+
+            <div class="form-group">
+                <div class="form-label-row">
+                    <label class="form-label" for="email">E-mail</label>
+                </div>
+                <div class="form-input-wrapper">
+                    <input id="login-email" class="form-input" type="email" name="email" placeholder="Votre adresse e-mail ici..." required>
+                    <span id="form-icon-email" class="form-icon form-icon-email"></span>
+                </div>    
+            </div>
+
+            <button class="btn btn-primary" type="submit">Récupérer le compte </button>
+            <!-- Vou deixar o botão cinza da cor da borda pois ele fica inativo até que o email e senha sejam preenchidos. E quando os campos forem preenchidos, o botão fica da cor azul para indicar que já pode ser clicado. -->
+            <!-- Executar a funcionalidade em JS para o botão ficar inativo até que o email seja preenchido. E quando o campo de email for preenchido, o botão fica ativo para indicar que já pode ser clicado. -->
+        </form>
+    </main>
+    
+    <footer class="page-footer">
+        <!-- Falta criar a funcionalidade da troca de lingua.  -->
+        <!-- Pensar em adicionar aqui também o dark/ligth mode. -->
+        <a href="#" class="page-footer-icon-lang">
+            <img src="../shared/icons/icon-langue.svg" class="page-footer-icon" alt="icône des langues">
+        </a>
+        <p class="page-footer-signup">Pas encore de compte ? 
+            <a class="footer-link" href="gbo-signup.html">Créer un compte</a>
+        </p>
+        <a class="footer-link" href="gbo-login.html">Retour à la page de connexion</a>
+    </footer>
+
+    <script src="gbo-account-recovery.js"></script>
+</body>
+</html>
