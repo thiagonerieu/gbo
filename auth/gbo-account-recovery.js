@@ -20,17 +20,3 @@ inputEmail.addEventListener('keyup',()=>{
         inputEmail.style.color = "#E2E8F0";
     }            
 });
-
-const showPassword = document.querySelector(".form-icon-eye");
-showPassword.addEventListener('click',()=>{
-    let inputPassword = document.querySelector("#login-password");
-    console.log("Account Recovery : Lorsque vous cliquez dessus, le mot de passe s'affiche ou se masque.");
-    // Mostra uma orientação JS icon-eye visible e hidden, indicando que o ícone de olho é clicável para mostrar ou ocultar a senha, alternando o tipo do campo de senha entre "password" e "text" e mudando a imagem do ícone de olho para refletir o estado atual (visível ou oculto).
-    if (inputPassword.type === "password") {
-        inputPassword.type = "text";
-        showPassword.style.backgroundImage = "url('../shared/icons/icon-eye-visible.svg')";
-    } else {
-        inputPassword.type = "password";
-        showPassword.style.backgroundImage = "url('../shared/icons/icon-eye-hidden.svg')";
-    }
-});

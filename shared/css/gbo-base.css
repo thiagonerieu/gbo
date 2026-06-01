@@ -1,11 +1,13 @@
 @font-face {
     font-family: 'titleFont';
     src: url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'bodyFont';
     src: url('../fonts/open-sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* === RESET / BASE === */
@@ -192,7 +194,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     opacity: 0.6;
 }
 
-.form-icon-padlock {
+.form-icon-padlock, .form-icon-padlock-confirm {
     position: absolute;
     left: 16px;
     width: 20px;
@@ -203,7 +205,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     opacity: 0.6;
 }
 
-.form-icon-eye {
+.form-icon-eye, .form-icon-eye-confirm {
     position: absolute;
     right: 16px;
     width: 20px;
@@ -215,7 +217,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     opacity: 0.6;
 }
 
-.form-icon-eye:hover {
+.form-icon-eye:hover, .form-icon-eye-confirm:hover {
     opacity: 1;
 }
 
@@ -229,17 +231,20 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     transition: opacity 2s ease;
 }
 
-.btn:hover {
+.btn:hover { 
     opacity: 0.85;
     background-color: var(--color-primary);
     color: var(--color-text);
 }
 
-.btn-primary {
+
+/* Ajustar botões inativos para terem a mesma aparência, indicando que estão desabilitados, e quando os campos forem preenchidos, o botão fica ativo para indicar que já pode ser clicado. A funcionalidade de ativar/desativar o botão deve ser implementada em JS, monitorando os campos de email e senha para habilitar o botão somente quando ambos estiverem preenchidos. */
+.btn-submit-login, .btn-submit-signup, .btn-submit-account-recovery {
     background-color: var(--color-surface);
     border: 1px solid var(--color-primary);
     color: var(--color-text);
     width: 100%;
+    opacity: 0.6;
 }
 
 .page-footer-icon-lang {

@@ -13,7 +13,7 @@ body.page-signup .form {
 }
 
 .page-header p {
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 /* portables 768px maximun */
