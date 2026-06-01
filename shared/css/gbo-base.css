@@ -18,7 +18,6 @@
     padding: 0;
 }
 
-/* shared/css/gbo-base.css | variáveis de base para mudança de estilos.*/
 :root {
     --color-bg:          #1E293B;
     --color-surface:     #334155;
@@ -34,6 +33,13 @@
 
     --font-title:        'titleFont', serif;
     --font-body:         'bodyFont', sans-serif;
+}
+
+h1 {
+    font-family: 'titleFont', serif;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    text-decoration:none;
 }
 
 body {
@@ -72,16 +78,6 @@ body::before {
 
 .page-main {
     margin: 0;
-}
-
-body.page-login .page-main {
-    display: flex;
-    justify-content: center;
-}
-
-body.page-login .form {
-    width: 100%;
-    max-width: 420px;
 }
 
 .page-header,
@@ -177,7 +173,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     left: 16px;
     width: 20px;
     height: 20px;
-    background-image: url('../icons/icon-profile.svg'); 
+    background-image: url('../shared/icons/icon-profile.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -188,7 +184,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     left: 16px;
     width: 20px;
     height: 20px;
-    background-image: url('../icons/icon-email.svg'); 
+    background-image: url('../shared/icons/icon-email.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -199,7 +195,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     left: 16px;
     width: 20px;
     height: 20px;
-    background-image: url('../icons/icon-padlock-closed.svg'); 
+    background-image: url('../shared/icons/icon-padlock-closed.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -211,7 +207,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background-image: url('../icons/icon-eye-hidden.svg'); 
+    background-image: url('../shared/icons/icon-eye-hidden.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;

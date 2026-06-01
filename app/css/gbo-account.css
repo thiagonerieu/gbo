@@ -1,22 +1,21 @@
-body.page-signup .page-main {
+body.page-account .page-main {
     display: flex;
     justify-content: center;
 }
 
-body.page-signup .form {
+body.page-account .form {
     width: 100%;
     max-width: 420px;
 }
 
-.page-header {
-    gap: 32px;
-}
-
-.page-header p {
-    color: var(--color-primary);
+.profile-complet-name {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
 }
 
 /* portables 768px maximun */
 /* @media screen and (max-width: 768px) {
     
 } */
+
