@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBook Organiser - Compte</title>
+    <link rel="stylesheet" href="../shared/css/gbo-base.css">
+    <link rel="stylesheet" href="./assets/css/gbo-app-account.css">
+</head>
+<body class="page-account">
+
+    <header class="page-header">
+        <img src="../imgs/logo-gbo.svg" class="page-header-logo" alt="logo GameBook Organiser">
+        <!-- <h1 class="page-title">Mon Compte</h1> -->
+    </header>
+    <main class="page-main">
+        
+        <div class="profile-identity">
+            <div class="profile-complet-name"><h2 class="profile-first-name">Thiago</h2><h2 class="profile-last-name">NERI</h2></div>
+            <div class="profile-email"><p class="profile-email-display">monadresseemail@email.com</p></div>
+        </div>
+
+        <div class="profile-fields">
+
+            <div class="profile-field-first-name">
+                <div class="profile-field-first-name-column">
+                    <label class="profile-field-label">Prénom</label>
+                    <span class="profile-field-value">Thiago</span>
+                </div>
+                <button class="btn btn-secondary profile-btn-edit" data-field="firstname">Changer</button>
+            </div>
+
+            <div class="profile-field-last-name">
+                <div class="profile-field-last-name-column">
+                    <label class="profile-field-label">Nom</label>
+                    <span class="profile-field-value">NERI</span>
+                </div>
+                <button class="btn btn-secondary profile-btn-edit" data-field="lastname">Changer</button>
+            </div>
+
+            <div class="profile-field-email">
+                <div class="profile-field-email-column">
+                    <label class="profile-field-label">E-mail</label>
+                    <span class="profile-field-value">thiagonerieu@gmail.com</span>
+                </div>
+                <button class="btn btn-secondary profile-btn-edit" data-field="email">Changer</button>    
+            </div>
+
+            <div class="profile-field-password">
+                <div class="profile-field-password-column">
+                    <label class="profile-field-label">Mot de passe</label>
+                    <span class="profile-field-hint">Modifiez le mot de passe de votre compte.</span>
+                </div>
+                <button class="btn btn-secondary profile-btn-edit" data-field="password">Changer</button>    
+            </div>
+
+        </div>
+
+        <div class="profile-danger-zone">
+            <div class="profile-field-danger-zone">
+                <label class="profile-field-label">Supprimer le compte</label>
+            </div>
+            <div>
+                <button class="btn btn-danger" id="btn-delete-account">Supprimer</button>
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer class="page-footer">
+        
+        <nav class="app-bottomnav">
+            <a href="./gbo-settings.html" class="bottomnav-item">
+                <img src="../shared/icons/icon-settings.svg" class="bottomnav-icon" alt="Paramètres">
+            </a>
+            <a href="./gbo-language.html" class="bottomnav-item">
+                <img src="../shared/icons/icon-langue.svg" class="bottomnav-icon" alt="Langue">
+            </a>
+            <a href="./gbo-projects.html" class="bottomnav-item">
+                <img src="../shared/icons/icon-projects.svg" class="bottomnav-icon" alt="Projets">
+            </a>
+            <a href="./gbo-profile.html" class="bottomnav-item bottomnav-item--active">
+                <img src="../shared/icons/icon-profile.svg" class="bottomnav-icon" alt="Profil">
+            </a>
+            <a href="./gbo-notifications.html" class="bottomnav-item">
+                <img src="../shared/icons/icon-notifications.svg" class="bottomnav-icon" alt="Notifications">
+            </a>
+        </nav>
+
+    </footer>
+
+    <script src="./js/gbo-app-account.js"></script>
+</body>
+</html>

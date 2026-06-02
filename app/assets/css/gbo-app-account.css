@@ -1,0 +1,80 @@
+body.page-account .page-main {
+    display: flex;
+    justify-content: center;
+}
+
+body.page-account .form {
+    width: 100%;
+    max-width: 420px;
+}
+
+.page-main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-identity {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 4vh;
+    padding-top: 4vh;
+
+}
+
+.profile-complet-name {
+    display: flex;
+    flex-direction:row;
+    gap: 8px;
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-text-primary);
+    font-family: var(--font-title);
+}
+
+.profile-email-display {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+
+.profile-fields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    gap: 3vh;   
+}
+
+.profile-field-first-name, .profile-field-last-name, .profile-field-email, .profile-field-password {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profile-field-first-name-column, .profile-field-last-name-column, .profile-field-email-column, .profile-field-password-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.profile-danger-zone {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1vh;
+    padding-top: 4vh;
+}
+
+
+
+
+
+/* portables 768px maximun */
+/* @media screen and (max-width: 768px) {
+    
+} */
+

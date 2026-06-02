@@ -36,7 +36,7 @@ showPassword.addEventListener('click',()=>{
 const showPasswordConfirm = document.querySelector(".form-icon-eye-confirm");
 showPasswordConfirm.addEventListener('click',()=>{
     let inputPasswordConfirm = document.querySelector("#signup-password-confirm");
-    console.log("Signup : Lorsque vous cliquez dessus, le mot de passe s'affiche ou se masque.");
+    console.log("Signup Confirm: Lorsque vous cliquez dessus, le mot de passe s'affiche ou se masque.");
     // Mostra uma orientação JS icon-eye visible e hidden, indicando que o ícone de olho é clicável para mostrar ou ocultar a senha, alternando o tipo do campo de senha entre "password" e "text" e mudando a imagem do ícone de olho para refletir o estado atual (visível ou oculto).
     if (inputPasswordConfirm.type === "password") {
         inputPasswordConfirm.type = "text";

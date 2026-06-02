@@ -1,21 +1,18 @@
-body.page-account .page-main {
+body.page-signup .page-main {
     display: flex;
     justify-content: center;
 }
 
-body.page-account .form {
+body.page-signup .form {
     width: 100%;
     max-width: 420px;
 }
 
-.profile-complet-name {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
+.page-header {
+    gap: 32px;
 }
 
 /* portables 768px maximun */
 /* @media screen and (max-width: 768px) {
     
 } */
-

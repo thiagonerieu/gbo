@@ -24,6 +24,7 @@
     --color-border:      #334155;
     --color-border-form: #E2E8F0;
     --color-text:        #E2E8F0;
+    --color-text-primary:#818CF8;
     --color-primary:     #818CF8;
     --color-accent:      #ff7b72;
 
@@ -33,11 +34,16 @@
 
     --font-title:        'titleFont', serif;
     --font-body:         'bodyFont', sans-serif;
+
+    --font-size-h1:      1.6rem;
+    --font-size-h2:      1.4rem;
+    --font-size-body:    1rem;
+    --font-size-label:   0.9rem; 
 }
 
 h1 {
     font-family: 'titleFont', serif;
-    font-size: 1.8rem;
+    font-size: var(--font-size-h1);
     color: var(--color-primary);
     text-decoration:none;
 }
@@ -51,16 +57,16 @@ body {
     justify-content: center;    /* centraliza verticalmente */
     min-height: 100vh;
     font-family: 'bodyFont', sans-serif;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
 }
 
 body::before {
     content: '';
     position: fixed;
-    inset: 0;                        /* top/right/bottom/left: 0 */
+    inset: 0;                               /* top/right/bottom/left: 0 */
     border: 8px solid var(--color-border);
-    pointer-events: none;            /* não bloqueia cliques */
-    z-index: 9999;                   /* fica na frente de tudo */
+    pointer-events: none;                   /* não bloqueia cliques */
+    z-index: 9999;                          /* fica na frente de tudo */
 }
 
 .page-header {
@@ -104,7 +110,7 @@ body::before {
 
 .form-label {
     font-family: 'bodyFont', sans-serif;
-    font-size: 0.9rem;
+    font-size: var(--font-size-label);
     color: var(--color-text);
 }
 
@@ -116,7 +122,7 @@ body::before {
 }
 
 .form-link {
-    font-size: 0.9rem;
+    font-size: var(--font-size-label);
     color: var(--color-text);
     text-decoration: underline;
 }
@@ -128,12 +134,12 @@ body::before {
 .form-input {
     width: 100%;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     border: 1px solid var(--color-border-form);
     background-color: var(--color-surface);
     color: var(--color-text);
     font-family: 'bodyFont', sans-serif;
-    font-size: 1rem;
+    font-size: var(--font-size-body)
 }
 
 .form-input:focus {
@@ -173,7 +179,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     left: 16px;
     width: 20px;
     height: 20px;
-    background-image: url('../shared/icons/icon-profile.svg'); 
+    background-image: url('../icons/icon-profile.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -184,7 +190,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     left: 16px;
     width: 20px;
     height: 20px;
-    background-image: url('../shared/icons/icon-email.svg'); 
+    background-image: url('../icons/icon-email.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -195,7 +201,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     left: 16px;
     width: 20px;
     height: 20px;
-    background-image: url('../shared/icons/icon-padlock-closed.svg'); 
+    background-image: url('../icons/icon-padlock-closed.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -207,7 +213,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background-image: url('../shared/icons/icon-eye-hidden.svg'); 
+    background-image: url('../icons/icon-eye-hidden.svg'); 
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.6;
@@ -219,11 +225,11 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 
 .btn {
     padding: 15px;
-    border-radius: 10px;
+    border-radius: var(--radius-md);
     border: none;
     cursor: pointer;
     font-family: 'bodyFont', sans-serif;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     transition: opacity 2s ease;
 }
 
@@ -267,7 +273,7 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 }
 
 .footer-link {
-    font-size: 0.9rem;
+    font-size: var(--font-size-label);
     color: var(--color-text);
     text-decoration: underline;
 }
