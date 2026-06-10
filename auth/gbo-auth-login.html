@@ -20,7 +20,7 @@
                     <label class="form-label" for="email">E-mail</label>
                 </div>
                 <div class="form-input-wrapper">
-                    <input id="login-email" class="form-input" type="email" name="email" placeholder="Votre adresse e-mail ici..." required>
+                    <input id="login-email" class="form-input" type="email" name="email" placeholder="Votre adresse e-mail ici..." autofocus required>
                     <span id="form-icon-email" class="form-icon form-icon-email" alt="Icône d'adresse e-mail"></span>
                 </div>    
             </div>
@@ -35,9 +35,10 @@
                     <span class="form-icon form-icon-padlock" alt="Icône de verrouillage"></span>
                     <span class="form-icon form-icon-eye" alt="Icône d'œil"></span>
                 </div>
+                    <!-- Adicionar check de "manter conectado" para o usuário não precisar ficar digitando email e senha toda vez que for acessar a plataforma. E também para facilitar o acesso do usuário, já que ele pode deixar a conta salva no navegador. -->
             </div>
 
-            <button class="btn btn-submit-login" type="submit">Se connecter</button>
+            <button class="btn btn-submit-login" type="submit" value="Se connecter">Se connecter</button>
             <!-- Vou deixar o botão cinza da cor da borda pois ele fica inativo até que o email e senha sejam preenchidos. E quando os campos forem preenchidos, o botão fica da cor azul para indicar que já pode ser clicado. -->
         </form>
     </main>

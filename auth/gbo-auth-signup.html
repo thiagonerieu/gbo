@@ -23,7 +23,7 @@
                     <label class="form-label" for="first-name">Prénom</label>
                 </div>
                 <div class="form-input-wrapper">
-                    <input id="signup-first-name" class="form-input" type="text" name="first-name" placeholder="Votre prénom ici..." required>
+                    <input id="signup-first-name" class="form-input" type="text" name="first-name" placeholder="Votre prénom ici..." maxlength="20" autofocus required>
                     <!-- Limitar caracteres de primeiro e segundo nome em JS. -->
                     <span class="form-icon form-icon-first-name" alt="Icône de profil"></span>
                 </div>
@@ -34,7 +34,7 @@
                     <label class="form-label" for="last-name">Nom</label>
                 </div>
                 <div class="form-input-wrapper">
-                    <input id="signup-last-name" class="form-input" type="text" name="last-name" placeholder="Votre nom ici..." required>
+                    <input id="signup-last-name" class="form-input" type="text" name="last-name" placeholder="Votre nom ici..." maxlength="20" required>
                     <span class="form-icon form-icon-last-name" alt="Icône de profil"></span>
                 </div>
             </div>
@@ -72,8 +72,14 @@
                     <!-- Inserir comando JS que avisa quando as senham não coincidem. E também para mostrar o ícone de bloqueado quando as senhas não coincidirem, e o ícone de desbloqueado quando as senhas coincidirem. -->
                 </div>
             </div>
-
-            <button class="btn btn-submit-signup" type="submit">Créer un compte</button>
+            <!-- Inserir box checklist para aceitar os termos de uso e política de privacidade. -->
+            <div class="form-group">
+                <div class="form-checkbox-wrapper">
+                    <input id="signup-checkbox-terms" class="form-checkbox" type="checkbox" name="checkbox-terms" required>
+                    <label class="form-label" for="terms">J'accepte les termes d'utilisation et la politique de confidentialité.</label>
+                </div>
+            </div>
+            <button class="btn btn-submit-signup" type="submit" value="Créer un compte">Créer un compte</button>
 
         </form>
     </main>
